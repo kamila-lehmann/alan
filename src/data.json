@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "title": "Mecz Piłki Nożnej",
+    "event_date_time": "2024-07-15T18:00:00",
+    "description": "Mecz lokalnej ligi piłki nożnej.",
+    "image": "https://picsum.photos/600/300",
+    "event_type": "Sport",
+    "contact_phone": "123-456-789",
+    "contact_email": "kontakt@sportowe-wydarzenia.pl",
+    "event_location": "Stadion Miejski, Warszawa"
+  },
+  {
+    "id": 2,
+    "title": "Koncert Jazzowy",
+    "event_date_time": "2024-07-20T20:00:00",
+    "description": "Koncert znanego zespołu jazzowego.",
+    "image": "https://picsum.photos/600/300",
+    "event_type": "Kultura",
+    "contact_phone": "987-654-321",
+    "contact_email": "kontakt@muzyczne-wydarzenia.pl",
+    "event_location": "Sala Koncertowa, Kraków"
+  },
+  {
+    "id": 3,
+    "title": "Maraton Biegowy",
+    "event_date_time": "2024-08-01T07:00:00",
+    "description": "Coroczny maraton biegowy w centrum miasta.",
+    "image": "https://picsum.photos/600/300",
+    "event_type": "Sport",
+    "contact_phone": "234-567-890",
+    "contact_email": "kontakt@zdrowie.pl",
+    "event_location": "Rynek Główny, Gdańsk"
+  },
+  {
+    "id": 4,
+    "title": "Wystawa Sztuki Współczesnej",
+    "event_date_time": "2024-08-05T10:00:00",
+    "description": "Wystawa prac lokalnych artystów.",
+    "image": "https://picsum.photos/600/300",
+    "event_type": "Kultura",
+    "contact_phone": "345-678-901",
+    "contact_email": "kontakt@kulturalne-wydarzenia.pl",
+    "event_location": "Galeria Sztuki, Wrocław"
+  },
+  {
+    "id": 5,
+    "title": "Warsztaty Jogi",
+    "event_date_time": "2024-08-10T09:00:00",
+    "description": "Warsztaty jogi dla początkujących.",
+    "image": "https://picsum.photos/600/300",
+    "event_type": "Zdrowie",
+    "contact_phone": "456-789-012",
+    "contact_email": "kontakt@zdrowie.pl",
+    "event_location": "Centrum Jogi, Łódź"
+  },
+  {
+    "id": 6,
+    "title": "Spektakl Teatralny",
+    "event_date_time": "2024-08-15T19:00:00",
+    "description": "Spektakl teatralny znanego reżysera.",
+    "image": "https://picsum.photos/600/300",
+    "event_type": "Kultura",
+    "contact_phone": "567-890-123",
+    "contact_email": "kontakt@teatr.pl",
+    "event_location": "Teatr Narodowy, Warszawa"
+  },
+  {
+    "id": 7,
+    "title": "Turniej Tenisa",
+    "event_date_time": "2024-08-20T10:00:00",
+    "description": "Międzynarodowy turniej tenisa ziemnego.",
+    "image": "https://picsum.photos/600/300",
+    "event_type": "Sport",
+    "contact_phone": "678-901-234",
+    "contact_email": "kontakt@sportowe-wydarzenia.pl",
+    "event_location": "Korty Tenisowe, Poznań"
+  },
+  {
+    "id": 8,
+    "title": "Festiwal Filmowy",
+    "event_date_time": "2024-08-25T18:00:00",
+    "description": "Festiwal filmowy prezentujący filmy niezależne.",
+    "image": "https://picsum.photos/600/300",
+    "event_type": "Kultura",
+    "contact_phone": "789-012-345",
+    "contact_email": "kontakt@film.pl",
+    "event_location": "Kino Nowe Horyzonty, Wrocław"
+  },
+  {
+    "id": 9,
+    "title": "Warsztaty Zdrowego Odżywiania",
+    "event_date_time": "2024-08-30T14:00:00",
+    "description": "Warsztaty dotyczące zdrowego odżywiania.",
+    "image": "https://picsum.photos/600/300",
+    "event_type": "Zdrowie",
+    "contact_phone": "890-123-456",
+    "contact_email": "kontakt@zdrowie.pl",
+    "event_location": "Centrum Zdrowia, Katowice"
+  },
+  {
+    "id": 10,
+    "title": "Mecz Koszykówki",
+    "event_date_time": "2024-09-05T17:00:00",
+    "description": "Mecz koszykówki ligi krajowej.",
+    "image": "https://picsum.photos/600/300",
+    "event_type": "Sport",
+    "contact_phone": "901-234-567",
+    "contact_email": "kontakt@sportowe-wydarzenia.pl",
+    "event_location": "Hala Sportowa, Lublin"
+  },
+  {
+    "id": 11,
+    "title": "Koncert Muzyki Klasycznej",
+    "event_date_time": "2024-09-10T19:00:00",
+    "description": "Koncert orkiestry symfonicznej.",
+    "image": "https://picsum.photos/600/300",
+    "event_type": "Kultura",
+    "contact_phone": "012-345-678",
+    "contact_email": "kontakt@muzyczne-wydarzenia.pl",
+    "event_location": "Filharmonia, Szczecin"
+  },
+  {
+    "id": 12,
+    "title": "Bieg na 5 km",
+    "event_date_time": "2024-09-15T08:00:00",
+    "description": "Bieg charytatywny na 5 km.",
+    "image": "https://picsum.photos/600/300",
+    "event_type": "Sport",
+    "contact_phone": "123-456-789",
+    "contact_email": "kontakt@zdrowie.pl",
+    "event_location": "Park Miejski, Rzeszów"
+  },
+  {
+    "id": 13,
+    "title": "Wystawa Fotograficzna",
+    "event_date_time": "2024-09-20T10:00:00",
+    "description": "Wystawa fotografii artystycznej.",
+    "image": "https://picsum.photos/600/300",
+    "event_type": "Kultura",
+    "contact_phone": "234-567-890",
+    "contact_email": "kontakt@kulturalne-wydarzenia.pl",
+    "event_location": "Galeria Fotografii, Warszawa"
+  },
+  {
+    "id": 14,
+    "title": "Warsztaty Medytacyjne",
+    "event_date_time": "2024-09-25T09:00:00",
+    "description": "Warsztaty medytacyjne dla początkujących.",
+    "image": "https://picsum.photos/600/300",
+    "event_type": "Zdrowie",
+    "contact_phone": "345-678-901",
+    "contact_email": "kontakt@zdrowie.pl",
+    "event_location": "Centrum Medytacji, Kraków"
+  },
+  {
+    "id": 15,
+    "title": "Spektakl Baletowy",
+    "event_date_time": "2024-09-30T18:00:00",
+    "description": "Spektakl baletowy w wykonaniu narodowej grupy baletowej.",
+    "image": "https://picsum.photos/600/300",
+    "event_type": "Kultura",
+    "contact_phone": "456-789-012",
+    "contact_email": "kontakt@teatr.pl",
+    "event_location": "Teatr Wielki, Poznań"
+  },
+  {
+    "id": 16,
+    "title": "Turniej Siatkówki",
+    "event_date_time": "2024-10-05T14:00:00",
+    "description": "Międzynarodowy turniej siatkówki plażowej.",
+    "image": "https://picsum.photos/600/300",
+    "event_type": "Sport",
+    "contact_phone": "567-890-123",
+    "contact_email": "kontakt@sportowe-wydarzenia.pl",
+    "event_location": "Plaża Miejska, Sopot"
+  },
+  {
+    "id": 17,
+    "title": "Festiwal Teatralny",
+    "event_date_time": "2024-10-10T19:00:00",
+    "description": "Festiwal teatralny prezentujący nowe spektakle.",
+    "image": "https://picsum.photos/600/300",
+    "event_type": "Kultura",
+    "contact_phone": "678-901-234",
+    "contact_email": "kontakt@teatr.pl",
+    "event_location": "Teatr Stary, Kraków"
+  },
+  {
+    "id": 18,
+    "title": "Konferencja Zdrowia",
+    "event_date_time": "2024-10-15T09:00:00",
+    "description": "Konferencja dotycząca nowoczesnych metod leczenia.",
+    "image": "https://picsum.photos/600/300",
+    "event_type": "Zdrowie",
+    "contact_phone": "789-012-345",
+    "contact_email": "kontakt@zdrowie.pl",
+    "event_location": "Centrum Konferencyjne, Warszawa"
+  },
+  {
+    "id": 19,
+    "title": "Koncert Muzyki Rockowej",
+    "event_date_time": "2024-10-20T20:00:00",
+    "description": "Koncert znanego zespołu rockowego.",
+    "image": "https://picsum.photos/600/300",
+    "event_type": "Kultura",
+    "contact_phone": "890-123-456",
+    "contact_email": "kontakt@muzyczne-wydarzenia.pl",
+    "event_location": "Hala Widowiskowa, Łódź"
+  },
+  {
+    "id": 20,
+    "title": "Zawody Lekkoatletyczne",
+    "event_date_time": "2024-10-25T10:00:00",
+    "description": "Mistrzostwa krajowe w lekkoatletyce.",
+    "image": "https://picsum.photos/600/300",
+    "event_type": "Sport",
+    "contact_phone": "901-234-567",
+    "contact_email": "kontakt@sportowe-wydarzenia.pl",
+    "event_location": "Stadion Olimpijski, Wrocław"
+  }
+]
