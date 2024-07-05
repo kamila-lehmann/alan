@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import data from "./data.json";
-import { EventInterface } from "./interface";
+import { EventInterface } from "./services/interface";
 import Header from "./components/Header";
 import AppButton from "./components/AppButton";
 import EventCard from "./components/EventCard";

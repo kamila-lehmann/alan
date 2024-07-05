@@ -3,58 +3,18 @@ import Header from "./components/Header";
 import Box from "@mui/material/Box";
 import MenuItem from "@mui/material/MenuItem";
 import TextField from "@mui/material/TextField";
-import { LocalizationProvider } from "@mui/x-date-pickers";
+import { DateTimePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { Dayjs } from "dayjs";
 import "dayjs/locale/pl";
-import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import { TimePicker } from "@mui/x-date-pickers/TimePicker";
 import { ChangeEvent, SyntheticEvent, useState } from "react";
-import axios from "axios";
-import { serverAddress } from "./utils/serverAddress";
-
-const eventTypes = [
-  {
-    value: "Kultura",
-    label: "Kultura",
-  },
-  {
-    value: "Sport",
-    label: "Sport",
-  },
-  {
-    value: "Zdrowie",
-    label: "Zdrowie",
-  },
-];
+import { eventTypes } from "./services/eventTypes";
+import { initialValues } from "./services/initialValues";
+import { postNewEvent } from "./services/postNewEvent";
 
 const Form = () => {
-  const [formData, setFormData] = useState({
-    title: "",
-    description: "",
-    image: "",
-    event_type: "",
-    contact_phone: "",
-    contact_email: "",
-    event_location: "",
-    event_date_time: "",
-  });
-  const [dateValue, setDateValue] = useState<Dayjs | null>();
-  const [timeValue, setTimeValue] = useState<Dayjs | null>();
-
-  const postNewEvent = async (data: string) => {
-    await axios({
-      method: "post",
-      url: `${serverAddress}/add`,
-      data: data,
-    })
-      .then(() => {
-        console.log("Event successfully added!");
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+  const [formData, setFormData] = useState(initialValues);
+  const [dateTimeValue, setDateTimeValue] = useState<Dayjs | null>();
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -63,28 +23,15 @@ const Form = () => {
 
   const handleSubmit = (e: SyntheticEvent<EventTarget>) => {
     e.preventDefault();
-    const date = dateValue?.format("YYYY-MM-DD");
-    const time = timeValue?.format("HH:mm:ss");
-    const eventDateTime = `${date}T${time}`;
-    formData.event_date_time = eventDateTime;
+    formData.event_date_time = dateTimeValue!.format("YYYY-MM-DDTHH:mm:ss");
     console.log(JSON.stringify(formData));
     const dataToSend = JSON.stringify(formData);
     // postNewEvent(dataToSend);
   };
 
   const resetForm = () => {
-    setFormData({
-      title: "",
-      description: "",
-      image: "",
-      event_type: "",
-      contact_phone: "",
-      contact_email: "",
-      event_location: "",
-      event_date_time: "",
-    });
-    setDateValue(null);
-    setTimeValue(null);
+    setFormData(initialValues);
+    setDateTimeValue(null);
   };
 
   return (
@@ -93,6 +40,7 @@ const Form = () => {
         <Header title={"Dodaj nowe wydarzenie"}></Header>
         <Box
           component={"form"}
+          noValidate
           onSubmit={handleSubmit}
           sx={{
             width: "95%",
@@ -135,18 +83,12 @@ const Form = () => {
               />
             </div>
             <div>
-              <DatePicker
+              <DateTimePicker
                 disablePast
-                label="Data wydarzenia *"
-                name="event_date"
-                value={dateValue}
-                onChange={(newValue) => setDateValue(newValue)}
-              />
-              <TimePicker
-                label="Godzina wydarzenia *"
-                name="event_time"
-                value={timeValue}
-                onChange={(newValue) => setTimeValue(newValue)}
+                label="Data i czas wydarzenia *"
+                name="event_date_time"
+                value={dateTimeValue}
+                onChange={(newValue) => setDateTimeValue(newValue)}
               />
               <TextField
                 required

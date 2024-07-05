@@ -4,7 +4,7 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import PlaceIcon from "@mui/icons-material/Place";
-import { EventInterface } from "../interface";
+import { EventInterface } from "../services/interface";
 import CardActions from "@mui/material/CardActions";
 import Button from "@mui/material/Button";
 

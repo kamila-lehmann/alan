@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { serverAddress } from "./utils/serverAddress";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { EventInterface } from "./interface";
+import { EventInterface } from "./services/interface";
 import Loader from "./components/Loader";
 import Error from "./components/Error";
 import EventDetails from "./components/EventDetails";
