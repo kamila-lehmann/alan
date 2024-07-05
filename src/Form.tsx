@@ -14,11 +14,33 @@ import { postNewEvent } from "./services/postNewEvent";
 
 const Form = () => {
   const [formData, setFormData] = useState(initialValues);
-  const [dateTimeValue, setDateTimeValue] = useState<Dayjs | null>();
+  const [dateTimeValue, setDateTimeValue] = useState<Dayjs | null>(null);
+  const [errors, setErrors] = useState({
+    title: false,
+    description: false,
+    image: false,
+    event_type: false,
+    contact_phone: false,
+    contact_email: false,
+    event_location: false,
+  });
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
+    if (formData[e.target.name as keyof typeof errors] === "") {
+      setErrors((prevState) => {
+        const state = { ...prevState };
+        state[e.target.name as keyof typeof errors] = true;
+        return { ...state };
+      });
+    } else {
+      setErrors((prevState) => {
+        const state = { ...prevState };
+        state[e.target.name as keyof typeof errors] = false;
+        return { ...state };
+      });
+    }
   };
 
   const handleSubmit = (e: SyntheticEvent<EventTarget>) => {
@@ -40,7 +62,6 @@ const Form = () => {
         <Header title={"Dodaj nowe wydarzenie"}></Header>
         <Box
           component={"form"}
-          noValidate
           onSubmit={handleSubmit}
           sx={{
             width: "95%",
@@ -73,13 +94,14 @@ const Form = () => {
             <legend>Podstawowe informacje</legend>
             <div>
               <TextField
-                required
+                required={true}
                 fullWidth
                 id="title"
                 name="title"
                 label="Tytuł wydarzenia"
                 value={formData.title}
                 onChange={handleChange}
+                error={errors.title}
               />
             </div>
             <div>
@@ -91,12 +113,13 @@ const Form = () => {
                 onChange={(newValue) => setDateTimeValue(newValue)}
               />
               <TextField
-                required
+                required={true}
                 id="event_location"
                 label="Miejsce wydarzenia"
                 name="event_location"
                 value={formData.event_location}
                 onChange={handleChange}
+                error={errors.event_location}
               />
             </div>
           </fieldset>
@@ -104,15 +127,16 @@ const Form = () => {
             <legend>Dodatkowe informacje</legend>
             <div>
               <TextField
-                required
+                required={true}
                 id="image"
                 name="image"
                 label="Obrazek"
                 value={formData.image}
                 onChange={handleChange}
+                error={errors.image}
               />
               <TextField
-                required
+                required={true}
                 select
                 id="event_type"
                 name="event_type"
@@ -120,6 +144,7 @@ const Form = () => {
                 defaultValue=""
                 value={formData.event_type}
                 onChange={handleChange}
+                error={errors.event_type}
               >
                 {eventTypes.map((option) => (
                   <MenuItem key={option.value} value={option.value}>
@@ -130,13 +155,14 @@ const Form = () => {
             </div>
             <div>
               <TextField
-                required
+                required={true}
                 multiline
                 id="description"
                 name="description"
                 label="Opis wydarzenia"
                 value={formData.description}
                 onChange={handleChange}
+                error={errors.description}
               />
             </div>
           </fieldset>
@@ -144,20 +170,22 @@ const Form = () => {
             <legend>Informacje kontaktowe</legend>
             <div>
               <TextField
-                required
+                required={true}
                 id="contact_phone"
                 name="contact_phone"
                 label="Telefon kontaktowy"
                 value={formData.contact_phone}
                 onChange={handleChange}
+                error={errors.contact_phone}
               />
               <TextField
-                required
+                required={true}
                 id="contact_email"
                 name="contact_email"
                 label="E-mail do kontaktu"
                 value={formData.contact_email}
                 onChange={handleChange}
+                error={errors.contact_email}
               />
             </div>
           </fieldset>
